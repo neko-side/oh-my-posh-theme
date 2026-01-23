@@ -1,0 +1,1 @@
+Based On https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/zash.omp.json
