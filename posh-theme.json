@@ -5,19 +5,19 @@
             "alignment": "left",
             "segments": [
                 {
-                    "foreground": "#e7c91e",
+                    "foreground": "#40e71e",
                     "style": "plain",
                     "template": "{{ .UserName }}",
                     "type": "session"
                 },
                 {
-                    "foreground": "#e7c91e",
+                    "foreground": "#f3f3f3",
                     "style": "plain",
                     "template": "@",
                     "type": "text"
                 },
                 {
-                    "foreground": "#e7c91e",
+                    "foreground": "#c2a70e",
                     "style": "plain",
                     "template": "{{ .HostName }}",
                     "type": "text"
@@ -30,6 +30,12 @@
                     "style": "plain",
                     "template": " {{ .Path }}",
                     "type": "path"
+                },
+                                {
+                    "foreground": "#f3f3f3",
+                    "style": "plain",
+                    "template": ">",
+                    "type": "text"
                 },
                 {
                     "foreground": "#26ddfd",
