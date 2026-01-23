@@ -23,7 +23,7 @@
                     "type": "text"
                 },
                 {
-                    "foreground": "#2fff52",
+                    "foreground": "#40e71e",
                     "options": {
                         "style": "folder"
                     },
@@ -31,12 +31,24 @@
                     "template": " {{ .Path }}",
                     "type": "path"
                 },
-                                {
+                {
                     "foreground": "#f3f3f3",
                     "style": "plain",
                     "template": ">",
                     "type": "text"
                 },
+                {
+                    "foreground": "#ff0b03",
+                    "style": "plain",
+                    "template": " {{ if .Segments.Git.UpstreamGone }}{{ else if gt .Code 0 }}{{ else }}{{ end }} ",
+                    "type": "status"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
                 {
                     "foreground": "#26ddfd",
                     "options": {
@@ -45,12 +57,6 @@
                     "style": "plain",
                     "template": " <#DDB15F>git(</>{{ .HEAD }}<#DDB15F>)</>",
                     "type": "git"
-                },
-                {
-                    "foreground": "#ff0b03",
-                    "style": "plain",
-                    "template": " {{ if .Segments.Git.UpstreamGone }}{{ else if gt .Code 0 }}{{ else }}{{ end }} ",
-                    "type": "status"
                 }
             ],
             "type": "prompt"
