@@ -6,29 +6,11 @@
             "segments": [
                 {
                     "foreground": "#40e71e",
-                    "style": "plain",
-                    "template": "{{ .UserName }}",
-                    "type": "session"
-                },
-                {
-                    "foreground": "#f3f3f3",
-                    "style": "plain",
-                    "template": "@",
-                    "type": "text"
-                },
-                {
-                    "foreground": "#c2a70e",
-                    "style": "plain",
-                    "template": "{{ .HostName }}",
-                    "type": "text"
-                },
-                {
-                    "foreground": "#40e71e",
                     "options": {
                         "style": "folder"
                     },
                     "style": "plain",
-                    "template": " {{ .Path }}",
+                    "template": "{{ .Path }}",
                     "type": "path"
                 },
                 {
@@ -38,25 +20,19 @@
                     "type": "text"
                 },
                 {
-                    "foreground": "#ff0b03",
-                    "style": "plain",
-                    "template": " {{ if .Segments.Git.UpstreamGone }}{{ else if gt .Code 0 }}{{ else }}{{ end }} ",
-                    "type": "status"
-                }
-            ],
-            "type": "prompt"
-        },
-        {
-            "alignment": "right",
-            "segments": [
-                {
                     "foreground": "#26ddfd",
                     "options": {
                         "branch_icon": ""
                     },
                     "style": "plain",
-                    "template": " <#DDB15F>git(</>{{ .HEAD }}<#DDB15F>)</>",
+                    "template": " ({{ .HEAD }})",
                     "type": "git"
+                },
+                {
+                    "foreground": "#ff0b03",
+                    "style": "plain",
+                    "template": " {{ if .Segments.Git.UpstreamGone }}{{ else if gt .Code 0 }}{{ else }}{{ end }} ",
+                    "type": "status"
                 }
             ],
             "type": "prompt"
