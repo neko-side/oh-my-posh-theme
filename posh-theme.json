@@ -41,9 +41,9 @@
                     "type": "git"
                 },
                 {
-                    "foreground": "#DCB977",
+                    "foreground": "#ff0b03",
                     "style": "plain",
-                    "template": " \uf119",
+                    "template": " {{ if .Segments.Git.UpstreamGone }}{{ else if gt .Code 0 }}{{ else }}{{ end }} ",
                     "type": "status"
                 }
             ],
